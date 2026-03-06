@@ -1,0 +1,30 @@
+pipeline {
+
+    agent any
+ 
+    stages {
+ 
+        stage('Clone Repo') {
+
+            steps {
+
+                echo "Cloning repository..."
+
+            }
+
+        }
+ 
+        stage('Run Code') {
+
+            steps {
+
+                sh 'python3 hello.py'
+
+            }
+
+        }
+ 
+    }
+
+}
+ 
